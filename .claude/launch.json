@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "page",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "--no-project", "python", "-m", "http.server", "8765", "--directory", "core/data"],
+      "port": 8765
+    }
+  ]
+}

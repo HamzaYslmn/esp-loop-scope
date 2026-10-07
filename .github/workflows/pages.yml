@@ -1,0 +1,25 @@
+# The page on GitHub Pages: core/data as it is. It reaches a board on your network by its address.
+name: Pages
+on:
+  push:
+    branches: [main]
+    paths: [core/data/**]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency: pages
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: core/data
+      - id: deploy
+        uses: actions/deploy-pages@v5
