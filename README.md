@@ -8,6 +8,10 @@ such as two-wire bus or loop protocols, where you want both a live trace and a l
 **Open it:** https://hamzayslmn.github.io/esp-loop-scope/ ·
 [try the demo](https://hamzayslmn.github.io/esp-loop-scope/?demo) (no board needed)
 
+![Live view: a burst triggered at 2 ms/div, with measurements](docs/live.webp)
+
+![Events view: captured bursts grouped by signature, one decoded into bits and bytes](docs/events.webp)
+
 **What you get:**
 
 - **Live scope**: triggered 1 MS/s windows up to 2 ms/div, rolling view beyond, with the usual
